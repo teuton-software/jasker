@@ -23,7 +23,7 @@ implementation 'io.github.teuton-software:jasker:{jasker.version}'
 
 ## Upgrade Ruby gems
 
-`jasker` depends on some Ruby gems: `jasker`.
+`jasker` depends on some Ruby gems: `asker-tool`.
 
 ### Install Ruby gems
 
