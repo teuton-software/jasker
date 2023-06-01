@@ -1,4 +1,4 @@
-package io.github.teuton;
+package io.github.teuton.jasker;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -10,8 +10,6 @@ import java.util.ResourceBundle;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
-
-import io.github.teuton.jasker.Asker;
 
 public class AskerTest {
 
