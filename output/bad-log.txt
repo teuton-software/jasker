@@ -1,0 +1,11 @@
+==================================================
+Created by : asker (version 2.5.9)
+File       : bad-log.txt
+Time       : 2023-06-01 20:53:59 +0100
+==================================================
+
+[INFO] Project open
+   ├── inputdirs    = [1mC:\Users\fvarrui\GitHub\jasker\src\test\resources\demo2[0m
+   └── process_file = [1mbad.haml[0m
+
+[INFO] Showing concept data ([1mdefault[0m)
