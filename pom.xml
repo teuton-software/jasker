@@ -37,9 +37,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/teuton-software/jteuton.git</connection>
+		<connection>scm:git:git://github.com/teuton-software/jasker.git</connection>
 		<developerConnection>scm:git:git@github.com:fvarrui/fvarrui.git</developerConnection>
-		<url>https://github.com/teuton-software/jteuton</url>
+		<url>https://github.com/teuton-software/jasker</url>
 		<tag>v${project.version}</tag>
 	</scm>
 
