@@ -1,6 +1,6 @@
 # jasker
 
-[![Maven Central](http://img.shields.io/maven-central/v/io.github.teuton-software/jasker)](https://search.maven.org/artifact/io.github.teuton-software/jasker)
+[![Maven Central](http://img.shields.io/maven-central/v/io.github.teuton-software/jasker)](https://central.sonatype.com/search?smo=true&q=a%3Ajasker+g%3Aio.github.teuton-software)
 [![GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-%250778B9.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 All-in-one Java wrapper for [asker](https://rubygems.org/gems/asker-tool) Ruby gem (using JRuby).
