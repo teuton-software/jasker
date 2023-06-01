@@ -97,22 +97,6 @@ mvn install
 ## How to release to Maven Central
 
 
-
 ```bash
-git clone https://github.com/teuton-software/jasker.git
-cd jasker
+mvn deploy
 ```
-
-Download and install Ruby gem (`asker-tool`) into `src/main/resources`:
-
-```bash
-mvn exec:exec@install-rubygems
-```
-
-Build, package and install the JAR library into your local Maven repo:
-
-```bash
-mvn install
-```
-
-## How to release to Maven Central

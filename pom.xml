@@ -191,15 +191,15 @@
 				</executions>
 			</plugin>
 			<!-- deploy library to maven central -->
-			<!-- reminder: server tag with serverId=ossrh, username and password for 
+			<!-- reminder: server tag with serverId=s01.oss.sonatype.org, username and password for 
 				sonatype needed in settings.xml -->
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
+				<version>1.6.13</version>
 				<extensions>true</extensions>
 				<configuration>
-					<serverId>ossrh</serverId>
+					<serverId>s01.oss.sonatype.org</serverId>
 					<nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
