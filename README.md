@@ -37,7 +37,7 @@ mvn exec:exec@install-rubygems
 mvn clean:clean@uninstall-rubygems
 ```
 
-> Also deletes `target`directory.
+> Also deletes `target` directory.
 
 ### Reload all Ruby gems
 

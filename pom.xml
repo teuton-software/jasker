@@ -13,8 +13,8 @@
 	<url>https://github.com/teuton-software/jasker</url>
 
 	<properties>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<asker.version>2.5.9</asker.version>
 		<jackson.version>2.15.1</jackson.version>
@@ -50,6 +50,12 @@
 			<artifactId>jruby-complete</artifactId>
 			<version>${jruby.version}</version>
 		</dependency>
+		<!-- xml binding -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>4.0.3</version>
+		</dependency>
 		<!-- common io utils -->
 		<dependency>
 			<groupId>commons-io</groupId>
@@ -84,7 +90,7 @@
 
 	<build>
 		<plugins>
-			<!-- generate jteuton.properties file from pom.xml -->
+			<!-- generate jasker.properties file from pom.xml -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>properties-maven-plugin</artifactId>
@@ -96,7 +102,8 @@
 							<goal>write-project-properties</goal>
 						</goals>
 						<configuration>
-							<outputFile>${project.basedir}/src/test/resources/jasker.properties</outputFile>
+							<outputFile>
+								${project.basedir}/src/test/resources/jasker.properties</outputFile>
 						</configuration>
 					</execution>
 				</executions>
@@ -115,7 +122,8 @@
 						<configuration>
 							<filesets>
 								<fileset>
-									<directory>${basedir}/src/main/resources/rubygems</directory>
+									<directory>
+										${basedir}/src/main/resources/rubygems</directory>
 								</fileset>
 							</filesets>
 						</configuration>
@@ -191,8 +199,9 @@
 				</executions>
 			</plugin>
 			<!-- deploy library to maven central -->
-			<!-- reminder: server tag with serverId=s01.oss.sonatype.org, username and password for 
-				sonatype needed in settings.xml -->
+			<!-- reminder: server tag with serverId=s01.oss.sonatype.org,
+			username 
+				and password for sonatype needed in settings.xml -->
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -214,7 +223,8 @@
 		</snapshotRepository>
 		<repository>
 			<id>ossrh</id>
-			<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			<url>
+				https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
 

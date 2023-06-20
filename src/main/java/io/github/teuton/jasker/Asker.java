@@ -30,7 +30,7 @@ public class Asker {
 	 * @param args Arguments for asker command tool
 	 * @return Asker output
 	 */
-	public static String execute(String ... args) {
+	private static String execute(String ... args) {
 		return Ruby.run(BIN_PATH, args);
 	}
 	

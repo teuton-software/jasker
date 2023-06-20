@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<map xmlns="http://io.github.teuton-software/asker" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en" context="music, band" version="1" xsi:schemaLocation="http://io.github.teuton-software/asker src/main/resources/schema/asker.xsd">
+    <concept>
+        <names>nam1, name2</names>
+        <tags>tag1, tag2, tag3</tags>
+        <def type="text">def1</def>
+        <def type="text">def2</def>
+        <def type="text">def3</def>
+        <table fields="col1, col2" sequence="seq">
+            <row>
+                <col>rowValue</col>
+            </row>
+            <row>
+                <col>colValue</col>
+            </row>
+        </table>
+        <table fields=""/>
+    </concept>
+    <code>
+        <type>python</type>
+        <path>files\arrays.py</path>
+    </code>
+</map>
