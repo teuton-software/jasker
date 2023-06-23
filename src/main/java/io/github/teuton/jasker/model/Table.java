@@ -13,17 +13,20 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlType(name = "table")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Table<T> extends MapItem {
+public class Table extends MapItem {
 
 	@XmlAttribute
-	@XmlJavaTypeAdapter(value = AttributeListAdapter.class)	
+	@XmlJavaTypeAdapter(value = AttributeListAdapter.class)
 	private List<String> fields = new ArrayList<>();
-	
+
 	@XmlAttribute
 	private String sequence;
-	
+
 	@XmlElement(name = "row")
 	private List<Row> rows = new ArrayList<>();
+
+	@XmlElement
+	private Template template;
 
 	public List<String> getFields() {
 		return fields;
@@ -37,18 +40,26 @@ public class Table<T> extends MapItem {
 		this.sequence = sequence;
 	}
 
+	public Template getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(Template template) {
+		this.template = template;
+	}
+
 	public List<Row> getRows() {
 		return rows;
 	}
-	
+
 	public int getColumnsCount() {
 		return fields.size();
 	}
-	
+
 	public int getRowsCount() {
 		return rows.size();
 	}
-	
+
 	public String getValue(int row, int col) {
 		if (row < 0 || row >= getRowsCount()) {
 			throw new IllegalArgumentException("Invalid row " + row);
@@ -61,7 +72,7 @@ public class Table<T> extends MapItem {
 
 	@Override
 	public String toString() {
-		return "Table [fields=" + fields + ", sequence=" + sequence + ", rows=" + rows + "]";
+		return "Table [fields=" + fields + ", sequence=" + sequence + ", rows=" + rows + ", template=" + template + "]";
 	}
 
 }

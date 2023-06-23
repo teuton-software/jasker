@@ -26,7 +26,7 @@ public class Concept extends MapItem {
 	private List<Definition> definitions = new ArrayList<>();
 	
 	@XmlElement(name = "table")
-	private List<Table<String>> tables = new ArrayList<>();
+	private List<Table> tables = new ArrayList<>();
 
 	public List<String> getNames() {
 		return names;
@@ -40,7 +40,7 @@ public class Concept extends MapItem {
 		return definitions;
 	}
 
-	public List<Table<String>> getTables() {
+	public List<Table> getTables() {
 		return tables;
 	}
 

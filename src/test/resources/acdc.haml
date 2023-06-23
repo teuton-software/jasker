@@ -1,0 +1,83 @@
+%map{ lang: 'en', context: 'music, band', version: '1'}
+
+  %concept
+    %names AC/DC, ACDC
+    %tags rock, band, australia
+    %def Australian rock band formed by Scottish-born brothers Malcolm and Angus Young
+    %table{ fields: 'members' }
+      %row Bon Scott
+      %row Angus Young
+      %row Malcolm Young
+      %row Phil Rudd
+      %row Cliff Williams
+    %table{ fields: 'attribute, value' }
+      %row
+        %col Genres
+        %col Hard rock blues rock rock and roll
+      %row
+        %col Years active
+        %col 1973-present
+      %row
+        %col Formed in
+        %col Sydney
+    %table{ fields: 'Albums', sequence: 'Albums sorted by date' }
+      %row Albums High Voltage
+      %row Powerage
+      %row Highway to Hell
+      %row Back in Black
+      %row Ballbreaker
+      %row Rock or Bust
+
+  %code
+    %type python
+    %path files/string.py
+
+  %code
+    %type python
+    %path files/array.py
+
+  %code
+    %type python
+    %path files/iterator.py
+
+  %problem
+    %cases{ varnames: 'x,y,z,t' }
+      %case 1,2,3,4
+      %case 2,3,4,5
+      %case 5,6,7,8
+      %case 9,10,11,12
+    %desc First degree equations
+    %ask
+      %text Solve the equation 2X - 4 = 6
+      %step 2X -4 = 6
+      %step 2X = 6 +4
+      %step 2X = 10
+      %step X = 10 / 2
+      %step X = 5
+    %ask
+      %text Value of X in the following equation: 2X - 4 = 6
+      %answer 5
+
+  %problem
+    %cases{ varnames: "VALUES; MAX; MIN; AVERAGE", sep:";"}
+      %case 1,2,3,4,5; 5; 1; 3
+    %desc We have the following values: VALUES
+    %ask
+      %text Calculate the maximum
+      %answer MAX
+    %ask
+      %text Calculate minimum
+      %answer MIN
+    %ask
+      %text Calculate the average
+      %answer AVERAGE
+
+  %concept
+    %names command
+    %tags computing,directive,computer,perform,specific,task
+    %def In computing, is a directive to a computer program to perform a specific task.
+    %table{ fields: 'action, description' }
+      %template{ DIRNAME: 'Endor,Naboo,Dagobah' }
+        %row
+          %col mkdir DIRNAME
+          %col Create DIRNAME directory

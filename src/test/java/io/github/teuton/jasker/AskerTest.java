@@ -25,7 +25,7 @@ public class AskerTest {
 	public void testFileSuccess() throws Exception {
 		File tempDir = new File(System.getProperty("java.io.tmpdir"));
 		File outputDir = new File(tempDir, "output");
-		File inputFile = new File(RESOURCES, "input.haml");
+		File inputFile = new File(RESOURCES, "acdc.haml");
 		Asker.file(tempDir, inputFile);
 		assertTrue(outputDir.exists());
 		assertTrue(new File(outputDir, "input.yaml").exists());
@@ -45,19 +45,19 @@ public class AskerTest {
 	
 	@Test(expected = Exception.class)	
 	public void testFileBadInput() throws Exception {
-		File inputFile = new File(RESOURCES, "bad.haml");
+		File inputFile = new File(RESOURCES, "error/bad.haml");
 		Asker.file(inputFile);
 	}
 
 	@Test
 	public void testCheckSuccess() {
-		File inputFile = new File(RESOURCES, "input.haml");
+		File inputFile = new File(RESOURCES, "acdc.haml");
 		assertNull(Asker.check(inputFile));
 	}
 
 	@Test
 	public void testCheckFail() {
-		File inputFile = new File(RESOURCES, "bad.haml");
+		File inputFile = new File(RESOURCES, "error/bad.haml");
 		assertNotNull(Asker.check(inputFile));
 	}
 

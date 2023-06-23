@@ -147,39 +147,8 @@ public class Map {
 		if (!hamlFile.exists()) {
 			throw new FileNotFoundException(hamlFile.getAbsolutePath());
 		}
-		return loadFromXhtml(HAML.hamlToXhtml(hamlFile));		
-	}
-	
-	public static void main(String[] args) throws Exception {
-		
-//		Concept c1 = new Concept();
-//		c1.getNames().add("AC/DC");
-//		
-//		Map saveMap = new Map();
-//		saveMap.setLang("es");
-//		saveMap.setVersion("1.0");
-//		saveMap.getContext().add("rock");
-//		saveMap.getContext().add("band");
-//		saveMap.getItems().add(c1);
-//		
-//		saveMap.save(new File("test.xml"));
-
-//		File hamlFile = new File("src/test/resources/input.haml");
-//		Map map = loadFromHaml(hamlFile);
-//		System.out.println(map);
-
-		File xmlFile = new File("src/test/resources/input.xml");
-		Map map = loadFromXhtml(xmlFile);
-		System.out.println(map);		
-		map.saveToXhtml(new File("output.xml"));
-
-//		File badHamlFile = new File("src/test/resources/bad.haml");
-//		System.out.println(loadFromHaml(badHamlFile));
-//		
-//		File xhtmlFile = new File("sample.xml");
-//		System.out.println(loadFromXhtml(xhtmlFile));
-		
-		
+		String haml = HAML.hamlToXhtml(hamlFile);
+		return loadFromXhtml(haml);		
 	}
 
 }

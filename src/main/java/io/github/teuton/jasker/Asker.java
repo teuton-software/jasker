@@ -87,7 +87,8 @@ public class Asker {
 				"check", 						// asker command
 				filePath.getAbsolutePath()		// directory (check command argument)
 		).toString();
-		String error = errorWriter.toString();
+		output = clearColorCodes(output);
+		String error = clearColorCodes(errorWriter.toString());
 		if (error.isEmpty() && !output.contains("Syntax OK!")) {
 			error = output;
 		}

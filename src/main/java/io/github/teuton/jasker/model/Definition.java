@@ -11,16 +11,16 @@ import jakarta.xml.bind.annotation.XmlValue;
 public class Definition {
 
 	@XmlAttribute
-	private DefinitionType type = DefinitionType.text;
+	private String type;
 
 	@XmlValue
 	private String value;
 
-	public DefinitionType getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(DefinitionType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
