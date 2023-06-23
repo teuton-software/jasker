@@ -8,3 +8,4 @@ release.properties
 pom.xml.releaseBackup
 src/test/resources/jasker.properties
 output
+src/test/resources/output.xml
