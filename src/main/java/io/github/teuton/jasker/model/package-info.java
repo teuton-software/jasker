@@ -6,8 +6,7 @@
 		},
 		elementFormDefault = XmlNsForm.QUALIFIED,
 		attributeFormDefault = XmlNsForm.UNQUALIFIED,
-		location = "http://io.github.teuton-software/asker https://raw.githubusercontent.com/teuton-software/asker/master/schema/asker.xsd"
-		// location = "http://io.github.teuton-software/asker src/main/resources/schema/asker.xsd"
+		location = "http://io.github.teuton-software/asker https://github.com/teuton-software/asker/releases/download/v2.7.0/asker.xsd"
 )
 package io.github.teuton.jasker.model;
 
